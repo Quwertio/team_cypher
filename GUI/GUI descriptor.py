@@ -12,10 +12,10 @@ def decrypt_text(input_text):
 
 def show_decryptor():
     decryptor_window = ctk.CTkToplevel()
-    decryptor_window.title("Шифратор")
+    decryptor_window.title("Дешифратор")
     decryptor_window.geometry("600x400")
 
-    label = ctk.CTkLabel(decryptor_window, text="Шифратор", font=("Helvetica", 25))
+    label = ctk.CTkLabel(decryptor_window, text="Дешифратор", font=("Helvetica", 25))
     label.pack(padx=10, pady=10)
 
     input_text = ctk.CTkTextbox(decryptor_window, font=("Helvetica", 18), width=400, height=100)
@@ -29,7 +29,7 @@ def show_decryptor():
         decrypted_text = decrypt_text(text_to_decrypt)
         output_label.configure(text=decrypted_text)
 
-    decrypt_button = ctk.CTkButton(decryptor_window, text='Зашифровать', command=handle_decrypt,
+    decrypt_button = ctk.CTkButton(decryptor_window, text='Дешифровать', command=handle_decrypt,
                                    font=("Helvetica", 16), fg_color="#0078D7", text_color="white",
                                    width=200, height=40, corner_radius=15, border_width=2, border_color="#0053BA",
                                    hover_color="#0053BA")
